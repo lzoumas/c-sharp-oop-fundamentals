@@ -10,6 +10,8 @@ namespace ACM.BL
 
         }
 
+        public int CustomerType { get; set; }
+
         public Customer(int customerId)
         {
             this.CustomerId = customerId; // private setter, this - current instance

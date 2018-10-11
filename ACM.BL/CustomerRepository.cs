@@ -1,12 +1,21 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace ACM.BL
 {
     public class CustomerRepository
     {
+        private AddressRepository AddressRepository { get; set; }
+
+        public CustomerRepository()
+        {
+            AddressRepository = new AddressRepository();
+        }
+
         public Customer Retrieve(int customerId)
         {
             var customer = new Customer(customerId);
+            customer.AddressList = AddressRepository.RetrieveByCustomerId(customerId).ToList(); // collaborative relationship between Address and CustomerRepository
 
             if (customerId == 1)
             {

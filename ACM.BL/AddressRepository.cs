@@ -21,9 +21,36 @@ namespace ACM.BL
             return address;
         }
 
-        public List<Address> Retrieve()
+        public IEnumerable<Address> RetrieveByCustomerId(int customerId)
         {
-            return new List<Address>();
+            var addressList = new List<Address>();
+
+            var address =  new Address(1)
+            {
+                AddressType = 1,
+                StreetLine1 = "Bad End",
+                StreetLine2 = "Bagshot row",
+                City = "Hobbiton",
+                State = "Shire",
+                Country = "Middle Earth",
+                PostalCode = "144"
+            };
+
+            addressList.Add(address);
+
+            address = new Address(2)
+            {
+                AddressType = 2,
+                StreetLine1 = "Green Dragon",
+                City = "Bywater",
+                State = "Shire",
+                Country = "Middle Earth",
+                PostalCode = "146"
+            };
+
+            addressList.Add(address);
+
+            return addressList;
         }
 
         public bool Save(Address customer)
