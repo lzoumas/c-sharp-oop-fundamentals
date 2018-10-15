@@ -2,7 +2,7 @@
 
 namespace ACM.BL
 {
-    public class Customer
+    public class Customer : EntityBase
     {
         public Customer() // default ctor, no params
             : this(0) // Constructor Chaining, calls the other ctr by passing a default value.
@@ -60,12 +60,12 @@ namespace ACM.BL
 
         public List<Address> AddressList { get; set; }
 
-        public bool Validate()
+        public override bool Validate()
         {
             var isValid = true;
 
-            if (!string.IsNullOrWhiteSpace(LastName)) isValid = false;
-            if (!string.IsNullOrWhiteSpace(EmailAddress)) isValid = false;
+            if (string.IsNullOrWhiteSpace(LastName)) isValid = false;
+            if (string.IsNullOrWhiteSpace(EmailAddress)) isValid = false;
 
             return isValid;
         }

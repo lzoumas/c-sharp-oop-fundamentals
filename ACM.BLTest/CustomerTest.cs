@@ -84,7 +84,7 @@ namespace ACM.BLTest
             //-- Arrange
             var customer = new Customer();
             customer.LastName = "Baggins";
-            customer.EmailAddress = "fbaggins@hobbiton.met";
+            customer.EmailAddress = "fbaggins@hobbiton.me";
 
             var expected = true;
 
@@ -100,9 +100,9 @@ namespace ACM.BLTest
         {
             //-- Arrange
             var customer = new Customer();
-            customer.EmailAddress = "fbaggins@hobbiton.met";
+            customer.EmailAddress = "fbaggins@hobbiton.me";
 
-            var expected = true;
+            var expected = false;
 
             //-- Act
             var actual = customer.Validate();

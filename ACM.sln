@@ -9,6 +9,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{1E04AB9D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACM.BLTest", "ACM.BLTest\ACM.BLTest.csproj", "{004CCE6A-4E0D-4CE8-A319-1EDCE5478114}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.Common", "ACME.Common\Acme.Common.csproj", "{662BD8FF-4796-40EA-BEA4-462C6AC2B3D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.CommonTest", "Acme.CommonTest\Acme.CommonTest.csproj", "{DC69EE44-EE05-4C6A-90B2-31DE83585FFB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +27,21 @@ Global
 		{004CCE6A-4E0D-4CE8-A319-1EDCE5478114}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{004CCE6A-4E0D-4CE8-A319-1EDCE5478114}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{004CCE6A-4E0D-4CE8-A319-1EDCE5478114}.Release|Any CPU.Build.0 = Release|Any CPU
+		{662BD8FF-4796-40EA-BEA4-462C6AC2B3D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{662BD8FF-4796-40EA-BEA4-462C6AC2B3D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{662BD8FF-4796-40EA-BEA4-462C6AC2B3D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{662BD8FF-4796-40EA-BEA4-462C6AC2B3D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC69EE44-EE05-4C6A-90B2-31DE83585FFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC69EE44-EE05-4C6A-90B2-31DE83585FFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC69EE44-EE05-4C6A-90B2-31DE83585FFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC69EE44-EE05-4C6A-90B2-31DE83585FFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{004CCE6A-4E0D-4CE8-A319-1EDCE5478114} = {1E04AB9D-24F2-4659-9529-D1A5DD44F370}
+		{DC69EE44-EE05-4C6A-90B2-31DE83585FFB} = {1E04AB9D-24F2-4659-9529-D1A5DD44F370}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E38F8909-3584-4017-9EB4-E85E0BE33840}

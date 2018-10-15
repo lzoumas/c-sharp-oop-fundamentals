@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using ACME.Common;
+using System;
 
 namespace ACM.BL
 {
@@ -16,15 +16,26 @@ namespace ACM.BL
         }
 
         public Decimal? CurrentPrice { get; set; }
+
         public int ProductId { get; private set; }
+
         public string ProductDescription { get; set; }
-        public string ProductName { get; set; }
+
+        private string _ProductName;
+        public string ProductName
+        {
+            get
+            {
+                return _ProductName.InsertSpaces();
+            }
+            set { _ProductName = value; }
+        }
 
         public override bool Validate()
         {
             var isValid = true;
 
-            if (!string.IsNullOrWhiteSpace(ProductName)) isValid = false;
+            if (string.IsNullOrWhiteSpace(ProductName)) isValid = false;
             if (CurrentPrice == null) isValid = false;
 
             return isValid;
@@ -34,5 +45,6 @@ namespace ACM.BL
         {
             return ProductName;
         }
+
     }
 }
