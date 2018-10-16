@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using ACME.Common;
+using System.Collections.Generic;
 
 namespace ACM.BL
 {
-    public class Customer : EntityBase
+    public class Customer : EntityBase, ILoggable
     {
         public Customer() // default ctor, no params
             : this(0) // Constructor Chaining, calls the other ctr by passing a default value.
@@ -73,6 +74,15 @@ namespace ACM.BL
         public override string ToString()
         {
             return FullName;
+        }
+
+        public string Log()
+        {
+            var logString = CustomerId + ": " +
+                            FullName + " " +
+                            "Email: " + EmailAddress + " " +
+                            "Status: " + EntityState.ToString();
+            return logString;
         }
 
     }
